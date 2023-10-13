@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Json Tree Viewer</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>JSON Tree Viewer</h1>
+      <p class="subtitle">Simple JSON Viewer that runs completely on-client. No data exchange </p>
+      <label>
+        <input type="file" id="json-input" accept=".json">
+        <span class="load-button">Load JSON</span>
+      </label>
+      <p hidden id="error">Invalid file. Please load a valid JSON file.</p>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
