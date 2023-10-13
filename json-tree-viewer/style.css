@@ -66,3 +66,13 @@ h1 {
 input[type="file"] {
   display: none;
 }
+
+#tree-container {
+  text-align: left;
+  width: 50vw;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

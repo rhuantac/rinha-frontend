@@ -7,13 +7,18 @@
   </head>
   <body>
     <div id="app">
-      <h1>JSON Tree Viewer</h1>
-      <p class="subtitle">Simple JSON Viewer that runs completely on-client. No data exchange </p>
-      <label>
-        <input type="file" id="json-input" accept=".json">
-        <span class="load-button">Load JSON</span>
-      </label>
-      <p hidden id="error">Invalid file. Please load a valid JSON file.</p>
+      <div id="upload-container">
+        <h1>JSON Tree Viewer</h1>
+        <p class="subtitle">Simple JSON Viewer that runs completely on-client. No data exchange </p>
+        <label>
+          <input type="file" id="json-input" accept=".json">
+          <span class="load-button">Load JSON</span>
+        </label>
+        <p hidden id="error">Invalid file. Please load a valid JSON file.</p>
+      </div>   
+      <div hidden  id="tree-container">
+        <h1 id="filename"></h1>        
+      </div>   
     </div>
     <script type="module" src="/main.js"></script>
   </body>

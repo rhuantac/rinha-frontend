@@ -2,22 +2,24 @@ import './style.css'
 
 const errorMsg = document.getElementById("error")
 const jsonFile = document.getElementById("json-input")
+let jsonObject;
 
 const showErrorMsg = (show = true) => {
   errorMsg.hidden = !show;
 }
 
-const jsonParse = (text) => {
-  console.time("json-parse")
-  JSON.parse(text)
-  console.timeEnd("json-parse")
+const showTreeView = (filename, jsonData) => {
+  document.getElementById("upload-container").hidden = true;
+  document.getElementById("tree-container").hidden = false;
+  document.getElementById("filename").textContent = filename
+  jsonObject = jsonData;
 }
 
 const readFile = (file) => {
   const reader = new FileReader();
   reader.onload = (e) => {
     try {
-      jsonParse(e.target.result)
+      showTreeView(file.name, JSON.parse(e.target.result));
     } catch {
       showErrorMsg(true);
     }
